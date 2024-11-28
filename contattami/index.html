@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <title>Portfolio di Alessia</title>
+</head>
+<body>
+
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    
+    <header>
+     
+         
+      <nav class="nav">
+        <a href="/cv/index.html">CV</a>
+        <a href="/contattami/index.html">Contattami</a>
+ </nav>
+   
+     <a href="/index-Alebia.html">
+    <img src="/assets/img/Alessia Bianchi.png" alt="Logo del sito" class="logo">
+    </a> 
+
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="burger">&#9776;</label>
+
+    
+    <div class="nav-mobile">
+        <nav class="nav2">
+            <a href="/cv/index.html" class="nav-link text-dark">CV</a>
+            <a href="/contattami/index.html" class="nav-link text-dark">Contattami</a>
+       
+       <div class="socialburger">
+            <a href="https://www.instagram.com/alebia23/?hl=it" target="_blank" class="text-dark me-2"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/alessiabianchi1994/" target="_blank" class="text-dark me-2"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com" target="_blank" class="text-dark me-2"><i class="fab fa-github"></i></a>
+       </div>
+      </nav>
+    </div>
+ 
+
+<div class="social-icons">
+      <a href="https://www.instagram.com/alebia23/?hl=it" target="_blank"><i
+        class="fab fa-instagram"></i></a>
+<a href="https://www.linkedin.com/in/alessiabianchi1994/" target="_blank"><i
+        class="fab fa-linkedin"></i></a>
+<a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+
+  
+   
+       </header>
+    
+    <main>
+        <section class="intro">
+            <div class="text-content">
+                <h1>Contattami</h1>
+                <h2>Compila il modulo e sarò felice di risponderti!</h2>
+            </div>
+            
+            <form id="contact-form" action="#" method="post" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Nome</label>
+                    <input type="text" id="name" name="name" placeholder="Il tuo nome" required>
+                </div>
+        
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="La tua email" required>
+                </div>
+        
+                <div class="form-group">
+                    <label for="message">Messaggio</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Il tuo messaggio" required></textarea>
+                </div>
+        
+                <button type="submit" class="submit-btn">Invia</button>
+            </form>
+        </section>
+      </section>
+    </main>
+    
+   
+    <footer>
+        <div class="footer-logo">Logo</div>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/alebia23/?hl=it" target="_blank"><i
+            class="fab fa-instagram"></i></a>
+    <a href="https://www.linkedin.com/in/alessiabianchi1994/" target="_blank"><i
+            class="fab fa-linkedin"></i></a>
+    <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+    </footer>
+
+    <!-- Includi il JS di EmailJS -->
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+    <!-- Inizializza EmailJS -->
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("GAlvOuUBfuRbzPQug");  // Sostituisci con il tuo user_id
+        })();
+    </script>
+
+    <!-- Invia il modulo a EmailJS -->
+    <script type="text/javascript">
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevenire il comportamento predefinito di invio del form
+
+            var form = event.target;
+            
+            // Usa emailjs.sendForm per inviare il form
+            emailjs.sendForm('service_8tpfx5j', 'template_57zwhcs', form)
+                .then(function(response) {
+                   console.log('Successo:', response);
+                   alert("Il tuo messaggio è stato inviato con successo!");
+                }, function(error) {
+                   console.error('Errore:', error);
+                   alert("C'è stato un errore nell'invio del messaggio. Riprova.");
+                });
+        });
+    </script>
+
+
+</body>
+</html>

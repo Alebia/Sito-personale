@@ -1,0 +1,1007 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color:#052f3d;
+  color: white;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 0.3em 3em;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 3em;
+  margin-right: 3em;
+  transition: margin-top 0.3s ease;
+}
+
+
+
+
+
+
+.box-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap; /* Permette ai box di andare a capo su schermi piccoli */
+  padding: 2em 0em;
+}
+
+.box-container2 {
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Permette ai box di andare a capo su schermi piccoli */
+  padding: 0em 0em;
+}
+
+/* Box singoli */
+.box {
+  background-color:#063f5271;
+  padding: 2em;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: calc(33.33% - 20px); /* Tre box in fila */
+  position: relative;
+  text-align: center;
+}
+
+/* Titolo del box */
+.box h3 {
+  font-size: 1.5em;
+  color: #052f3d;
+  margin-bottom: 10px;
+}
+
+
+/* Griglia per le immagini */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 immagini per riga */
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Immagini del progetto */
+.project img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(160, 162, 162, 0.184);
+}
+
+.project img:hover {
+  transform: scale(1.1); /* Effetto zoom sulle immagini al passaggio del mouse */
+}
+
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  overflow: auto;
+}
+
+.modal-content {
+  position: relative;
+  margin: 5% auto;
+  padding: 4em;
+  background-color: white;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.modal-content p {
+  position: relative;
+  margin: 15% auto;
+  padding: 20px;
+  color:#052f3d;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
+}
+
+
+.modal-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;  
+  transition: transform 0.3s ease;  
+  box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
+}
+
+.modal-img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.modal-desc {
+  margin-top: 10px;
+  font-size: 1.2em;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2em;
+  color: #052f3d;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+/* Quando un pop-up è targettato, mostralo */
+.modal:target {
+  display: block;
+}
+
+
+
+
+
+
+/* Media query per schermi piccoli */
+@media (max-width: 768px) {
+  .box {
+    width: calc(50% - 10px); /* Due box per riga su schermi piccoli */
+  }
+
+  .projects {
+    grid-template-columns: repeat(1, 1fr); /* Una sola colonna di immagini su schermi piccoli */
+  }
+
+  .modal-content p {
+  position: relative;
+  margin: 15% auto;
+  padding: 0px;
+  color:#052f3d;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 700px;
+  text-align: center;
+}
+
+.modal-content {
+  position: relative;
+  margin: 5% auto;
+  padding: 2em;
+  background-color: white;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
+}
+}
+
+
+
+
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 2em;
+}
+
+.intro p {
+
+  margin-top: 2em;
+}
+
+.logo {
+  width: 10em; 
+}
+
+
+.aboutme {
+  display: flex;
+  flex-direction: column;
+  width: 40em;
+  align-items: center;
+  gap: 3em;
+  text-align: center;
+}
+
+.text-content {
+  max-width: 50%; /* Imposta la larghezza massima per il testo */
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+.text-content  {
+  
+  margin-bottom: 1.5em;
+}
+
+.profile-pic {
+  width: 50em;
+  height: 35em;
+  background-image: url('/assets/img/fotoprofilo.jpg'); 
+  background-size: cover;
+  background-position: center;
+  opacity: 0.95; /* Opacità per effetto traslucido */
+  background-clip: content-box;
+  position: relative;
+  flex-shrink: 0;
+  margin-right: -3em;
+}
+
+.profile-pic:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to left, rgba(5, 47, 61, 0) 0%, rgba(5, 47, 61, 1) 100%);
+  
+}
+.nav {
+  display: flex;
+  gap: 2em;
+  margin: 0em 0em;
+}
+
+.nav a {
+  text-decoration: none;
+  color:#052f3d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav a:hover {
+  color: #e4ba86;
+  transition: color 0.3s;
+}
+
+
+.social-icons a {
+  width: 2em;
+  padding: 1em;
+  color:#052f3d;  
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #e4ba86;
+  transition: color 0.3s;
+}
+
+
+.clickable-container {
+  display: flex;
+  justify-content: center;
+  position:sticky;
+  margin-top: 3%;
+  margin-bottom: 2%;
+  flex-direction: row; 
+  gap: 10em; 
+}
+
+
+.clickable-section1,
+.clickable-section2,
+.clickable-section3 {
+  background-color: #f0f4f800;
+  color: #ffffff;
+  padding: 2% 3% 10% 3%;
+  text-align: center;
+  transition: background-color 0.3s;
+  text-decoration: none;
+  position: relative;
+  z-index: 3;
+  max-height: fit-content;
+  width: 15em;  
+  transition: transform 0.3s;
+  opacity: 0.8;
+}
+
+
+.burger {
+  display: none;
+  cursor: pointer;
+  font-size: 1.5em;
+}
+
+
+
+footer {
+  text-align: center;
+  padding: 2em 0;
+  background-color: white;
+}
+
+
+@media (max-width: 768px) {
+  .nav {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background-color: white;
+      width: 100%;
+      padding: 1em;
+  }
+
+  .nav a {
+    text-decoration: none;
+    color: #052f3d;
+  }
+
+
+  .burger {
+      display: block;
+      color: #052f3d;
+  }
+
+  .boxes {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .intro h1 {
+    flex-direction: column;
+    align-items: center;
+    width: 10em;
+  }
+
+  .intro h2 {
+    flex-direction: column;
+    align-items: center;
+    width: 12em;
+  }
+
+ .clickable-container {
+  flex-direction: column;
+    align-items: center;
+    width: 20em;
+ }
+
+ .profile-pic {
+  max-width: 310px;
+  max-height: 200px;
+  background-image: url('/assets/img/fotoprofilo.jpg'); /* Sostituisci con il percorso della tua immagine */
+  background-size: cover;
+  background-position: center;
+  opacity: 0.95; /* Opacità per effetto traslucido */
+  background-clip: content-box;
+  position: absolute;
+  z-index: -1;
+}
+
+.custom-font {
+  font-size:smaller;
+}
+
+header{
+padding: 0%;
+}
+}
+
+
+.menu-toggle, .toggle {
+  display: none; 
+}
+
+.menu-toggle:checked + .burger + .nav {
+  display: flex; 
+  margin-top: 1em;
+  border-bottom-left-radius: 15%;
+  border-bottom-right-radius: 15%;
+}
+
+
+
+/* Stile generico del modulo */
+.contact-form {
+    background-color: #fff;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    margin: 2em auto;
+    text-align: center;
+}
+
+.contact-form h2 {
+    font-size: 2em;
+    color: #052f3d;
+    margin-bottom: 1em;
+}
+
+.contact-form .form-group {
+    margin-bottom: 1.5em;
+    text-align: left;
+}
+
+.contact-form label {
+    display: block;
+    font-size: 1em;
+    color: #052f3d;
+    margin-bottom: 0.5em;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8em;
+    margin-top: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    font-size: 1em;
+    color: #052f3d;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #052f3d;
+    box-shadow: 0 0 5px rgba(5, 47, 61, 0.3);
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.submit-btn {
+    background-color: #052f3d;
+    color: white;
+    padding: 0.8em 2em;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #02617d;
+}
+
+
+
+
+
+/* Stile del modulo di contatto */
+.contact-form {
+  background-color: #fff;
+  padding: 2em;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  margin: 2em auto;
+  text-align: center;
+}
+
+.contact-form h1 {
+  font-size: 2.5em;
+  color: #052f3d;
+  margin-bottom: 1em;
+}
+
+.contact-form h2 {
+  font-size: 1.5em;
+  color: #052f3d;
+  margin-bottom: 2em;
+}
+
+.contact-form .form-group {
+  margin-bottom: 1.5em;
+  text-align: left;
+}
+
+.contact-form label {
+  display: block;
+  font-size: 1em;
+  color: #052f3d;
+  margin-bottom: 0.5em;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.8em;
+  margin-top: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  font-size: 1em;
+  color: #052f3d;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #052f3d;
+  box-shadow: 0 0 5px rgba(5, 47, 61, 0.3);
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.submit-btn {
+  background-color: #052f3d;
+  color: white;
+  padding: 0.8em 2em;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #02617d;
+}
+
+
+
+.nav-mobile {
+  display: none;
+}
+
+/* Mostra il menu a tendina (burger) quando il checkbox è selezionato */
+.menu-toggle:checked + .burger + .nav-mobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  padding: 1em;
+  position: absolute;
+  top: 60px; 
+  right: 0;
+  width: 100%;
+  z-index: 10;  
+  border-bottom-left-radius: 15%;
+  border-bottom-right-radius: 15%;
+}
+
+
+.nav-mobile .nav2 a {
+  text-decoration: none;
+  color: #052f3d;
+  padding: 1em;
+  font-size: 1.2em;
+  text-align: center;
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+}
+
+.nav-mobile .nav2 a:hover {
+  color: #e4ba86;
+}
+
+ 
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  padding-top: 1em;
+}
+
+.social-icons a {
+  width: 2em;
+  padding: 1em;
+  color: #052f3d;
+  font-size: 1.5em;
+}
+
+.social-icons a:hover {
+  color: #e4ba86;
+}
+
+
+
+
+
+/* Responsività per schermi piccoli */
+@media (max-width: 768px) {
+  .contact-form {
+      padding: 1.5em;
+  }
+
+  .contact-form h1 {
+      font-size: 2em;
+  }
+
+  .contact-form .form-group {
+      margin-bottom: 1.2em;
+  }
+
+  .submit-btn {
+      padding: 0.7em 1.8em;
+      font-size: 1em;
+  }
+
+  header {
+    padding: 0.3em 1em;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 10em;
+}
+
+.burger {
+    display: block;
+    font-size: 2em;
+    color: #052f3d;
+    cursor: pointer;
+}
+
+
+.menu-toggle:checked + .burger + .nav-mobile {
+    display: flex;
+    
+}
+
+.social-icons {
+    display: none;
+}
+
+.socialburger {
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.socialburger a {
+padding: 2em;
+}
+
+
+.nav-mobile .nav2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.nav-mobile  {
+  display: none;
+}
+
+  .nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 2.5em;
+    right: 0;
+    background-color: white;
+    width: 100%;
+  }
+
+  .burger {
+    display: block;
+    color: #052f3d;
+  }
+
+  .menu-toggle:checked + .burger + .nav2 {
+    display: flex;
+    margin-top: 1em;
+    border-bottom-left-radius: 15%;
+    border-bottom-right-radius: 15%;
+    flex-direction: column;
+    position: absolute;
+    top: 2.5em;
+    right: 0;
+    background-color: white;
+    width: 100%;
+  
+  }
+
+  /* Modifica la disposizione dei box (da 3 a 2 per i dispositivi mobili) */
+  .box {
+    width: calc(100% - 10px); /* Due box per riga su schermi piccoli */
+    padding: 1.5em;
+
+  }
+
+  /* Adatta la disposizione delle immagini nei box */
+  .projects {
+    grid-template-columns: repeat(1, 1fr); /* Una sola colonna per le immagini */
+  }
+
+  /* Adatta la foto del profilo */
+  .profile-pic {
+    width: 40em; /* La larghezza occupa tutto lo spazio disponibile */
+    height: 30em; /* Impostato a una altezza ragionevole */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.95;
+    margin-top: 2em;
+    margin-right: 1em;
+    margin-left: 1em;
+    border-radius: 50%;
+    position: relative;
+  }
+
+
+  /* Ridurre la dimensione del testo */
+  h1 {
+    font-size: 1.8em;
+    margin-bottom: 0.5em;
+    margin-top: 1em;
+  }
+
+  h2 {
+    font-size: 1.3em;
+  }
+
+  /* Aggiustamenti per la sezione intro */
+  .intro {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 1em;
+  }
+
+  .intro  h1{
+    width: auto;
+  }
+
+  .text-content {
+    max-width: 90%; /* Testo più largo sui dispositivi mobili */
+    text-align: center;
+  }
+
+  /* Box clickable (per i progetti) */
+  .clickable-container {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .clickable-section1 {
+    max-width: 100%;
+    width: 100%; /* I box sono ora più larghi */
+    padding: 10% 3%;
+  }
+
+  /* Adatta le immagini della galleria dei progetti */
+  .project img {
+    width: 100%; /* Le immagini riempiono il contenitore */
+    height: auto;
+    border-radius: 8px;
+  }
+
+  /* Modifica la dimensione dei pulsanti "More" */
+  .more-btn {
+    font-size: 1em;
+    padding: 0.8em 1.8em;
+  }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 2em 1em;
+  }
+
+  /* Modifica la larghezza delle immagini nei progetti per farle adattare ai dispositivi mobili */
+  .modal-img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Modulo di contatto */
+  .contact-form {
+    padding: 1.5em;
+    width: 100%;
+  }
+
+  .contact-form h2 {
+    font-size: 1.8em;
+    margin-bottom: 1em;
+  }
+
+  .contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 0.8em;
+    margin-top: 0.5em;
+    font-size: 1em;
+  }
+
+  .submit-btn {
+    padding: 0.7em 1.8em;
+    font-size: 1em;
+  }
+}
+
+/*cv*/
+
+.container {
+  display:flex ;
+  flex-direction: column;
+  max-width: 120em; /* Imposta una larghezza massima per il contenuto */
+  margin: 3em 3EM; /* Centra il contenuto orizzontalmente */
+  padding: 2em 3em; /* Padding per dare spazio interno */
+  background-color: #063f5271; /* Colore di sfondo coerente con lo stile del sito */
+  border-radius: 10px; /* Aggiunge angoli arrotondati */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Aggiunge ombra leggera */
+}
+
+.container h1, .container h2 {
+  color:#ffffff; /* Colore del testo in linea con il tema del sito */
+  border-radius: 30px;
+  text-align: center;
+}
+
+.container h6 {
+  color:#ffffff99; /* Colore del testo in linea con il tema del sito */
+}
+
+.container .col-md-8 p {
+  color:#ffffffcc; /* Colore del testo per i paragrafi */
+  max-width: 20em;
+  margin: 0 auto 1em auto;
+}
+
+.container ul {
+  list-style: none; /* Rimuove i pallini dalle liste */
+  padding-left: 0; /* Rimuove il padding a sinistra */
+}
+
+.container ul li {
+  margin-bottom: 1em; /* Distanza tra gli elementi della lista */
+  font-size: 1.1em; /* Font leggermente più grande per la leggibilità */
+  color: #f9f9f9; /* Colore del testo delle voci */
+}
+
+.container a {
+  color: #e4ba86; /* Colore del link */
+  text-decoration: none; /* Rimuove la sottolineatura */
+}
+
+.container a:hover {
+  color:#ccc; /* Colore del link al passaggio del mouse */
+  text-decoration: underline; /* Aggiunge sottolineatura al passaggio del mouse */
+}
+
+.container .row {
+  display: flex;
+  gap: 2em;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.container .col-md-4 ul {
+  margin-bottom: 3em;
+  margin-top: 2em;
+}
+
+.container .col-md-4 li {
+
+  margin-top: 1em;
+}
+
+.progress-container {
+  width: 100%; /* La larghezza della barra di progressione */
+  height: 10px; /* Altezza della barra */
+  background-color: #e0e0e0; /* Colore di sfondo della barra */
+  border-radius: 15px; /* Angoli arrotondati */
+  overflow: hidden; /* Evita che il contenuto esca dai bordi */
+}
+
+.progress-bar {
+  height: 100%; /* La barra di progresso avrà sempre l'altezza della container */
+  background-color: #ce944e; /* Colore della barra, verde in questo caso */
+  transition: width 0.3s ease; /* Aggiunge una transizione per un riempimento più fluido */
+}
+
+
+.container .col-md-4,
+.container .col-md-8 {
+  flex: 1;
+  min-width: 280px; /* Impedisce che le colonne si restringano troppo su schermi piccoli */
+  margin-top: 2em;
+}
+
+.container .col-md-4 {
+  background-color: #063f5271; /* Fondo leggero per la colonna laterale */
+  padding: 2em;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombra leggera */
+}
+
+.container .col-md-8 {
+  padding: 2em;
+}
+
+.container .col-md-8 h2 {
+  background-color:#ccccccd3;
+  margin-bottom: 1.5em;
+  color: #052f3d;
+}
+
+.container .col-md-4 h2 {
+  background-color:#ccccccd3;
+  margin-bottom: 1.5em;
+  color: #052f3d;
+}
+
+.container .col-md-8 .mb-4 {
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+  border-bottom: 0.05em solid #cccccc70; 
+}
+
+.container .col-md-8 .mb-4 h6 {
+  margin-bottom: 3.5em;
+}
+
+.container .mb-4 h5 {
+  margin-bottom: 3.5em;
+  color:#ce944ebe;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1.5em; /* Riduce il padding per schermi più piccoli */
+  }
+
+  .container .row {
+    flex-direction: column; /* Allinea le colonne in verticale su schermi piccoli */
+  }
+
+  .container .col-md-4,
+  .container .col-md-8 {
+    flex: none;
+    width: 100%;
+    margin-bottom: 2em;
+  }
+}
+
+
+ .container .profile-pic2 {
+  width:auto;
+  height: 10em;
+  background-image: url('/assets/img/fotoprofilo.jpg'); 
+  background-size: cover;
+  background-position: center;
+  opacity: 0.85; /* Opacità per effetto traslucido */
+  background-clip: padding-box;
+  position: relative;
+  display: flex;
+  align-items: center;
+  z-index: -1;
+}
