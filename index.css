@@ -6,7 +6,7 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color:#052f3d;
+  background-color: #052f3d;
   color: white;
 }
 
@@ -36,7 +36,8 @@ main {
   display: flex;
   justify-content: space-between;
   gap: 20px;
-  flex-wrap: wrap; /* Permette ai box di andare a capo su schermi piccoli */
+  flex-wrap: wrap;
+  /* Permette ai box di andare a capo su schermi piccoli */
   padding: 2em 0em;
 }
 
@@ -44,17 +45,19 @@ main {
   width: auto;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap; /* Permette ai box di andare a capo su schermi piccoli */
+  flex-wrap: wrap;
+  /* Permette ai box di andare a capo su schermi piccoli */
   padding: 0em 0em;
 }
 
 /* Box singoli */
 .box {
-  background-color:#063f5271;
+  background-color: #063f5271;
   padding: 2em;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: calc(33.33% - 20px); /* Tre box in fila */
+  width: calc(33.33% - 20px);
+  /* Tre box in fila */
   position: relative;
   text-align: center;
 }
@@ -70,7 +73,8 @@ main {
 /* Griglia per le immagini */
 .projects {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 immagini per riga */
+  grid-template-columns: repeat(2, 1fr);
+  /* 2 immagini per riga */
   gap: 10px;
   margin-top: 20px;
 }
@@ -85,7 +89,8 @@ main {
 }
 
 .project img:hover {
-  transform: scale(1.1); /* Effetto zoom sulle immagini al passaggio del mouse */
+  transform: scale(1.1);
+  /* Effetto zoom sulle immagini al passaggio del mouse */
 }
 
 
@@ -118,7 +123,7 @@ main {
   position: relative;
   margin: 15% auto;
   padding: 20px;
-  color:#052f3d;
+  color: #052f3d;
   border-radius: 10px;
   width: 80%;
   max-width: 600px;
@@ -129,8 +134,8 @@ main {
 .modal-img {
   width: 100%;
   height: auto;
-  border-radius: 8px;  
-  transition: transform 0.3s ease;  
+  border-radius: 8px;
+  transition: transform 0.3s ease;
   box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -168,34 +173,36 @@ main {
 /* Media query per schermi piccoli */
 @media (max-width: 768px) {
   .box {
-    width: calc(50% - 10px); /* Due box per riga su schermi piccoli */
+    width: calc(50% - 10px);
+    /* Due box per riga su schermi piccoli */
   }
 
   .projects {
-    grid-template-columns: repeat(1, 1fr); /* Una sola colonna di immagini su schermi piccoli */
+    grid-template-columns: repeat(1, 1fr);
+    /* Una sola colonna di immagini su schermi piccoli */
   }
 
   .modal-content p {
-  position: relative;
-  margin: 15% auto;
-  padding: 0px;
-  color:#052f3d;
-  border-radius: 10px;
-  width: 100%;
-  max-width: 700px;
-  text-align: center;
-}
+    position: relative;
+    margin: 15% auto;
+    padding: 0px;
+    color: #052f3d;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+  }
 
-.modal-content {
-  position: relative;
-  margin: 5% auto;
-  padding: 2em;
-  background-color: white;
-  border-radius: 10px;
-  width: 80%;
-  max-width: 600px;
-  text-align: center;
-}
+  .modal-content {
+    position: relative;
+    margin: 5% auto;
+    padding: 2em;
+    background-color: white;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+  }
 }
 
 
@@ -215,7 +222,7 @@ main {
 }
 
 .logo {
-  width: 10em; 
+  width: 10em;
 }
 
 
@@ -229,7 +236,8 @@ main {
 }
 
 .text-content {
-  max-width: 50%; /* Imposta la larghezza massima per il testo */
+  max-width: 50%;
+  /* Imposta la larghezza massima per il testo */
 }
 
 h1 {
@@ -241,18 +249,19 @@ h2 {
   font-size: 1.5em;
 }
 
-.text-content  {
-  
+.text-content {
+
   margin-bottom: 1.5em;
 }
 
 .profile-pic {
   width: 50em;
   height: 35em;
-  background-image: url('/assets/img/fotoprofilo.jpg'); 
+  background-image: url('assets/img/fotoprofilo.jpg');
   background-size: cover;
   background-position: center;
-  opacity: 0.95; /* Opacità per effetto traslucido */
+  opacity: 0.95;
+  /* Opacità per effetto traslucido */
   background-clip: content-box;
   position: relative;
   flex-shrink: 0;
@@ -267,8 +276,9 @@ h2 {
   right: 0;
   bottom: 0;
   background: linear-gradient(to left, rgba(5, 47, 61, 0) 0%, rgba(5, 47, 61, 1) 100%);
-  
+
 }
+
 .nav {
   display: flex;
   gap: 2em;
@@ -277,7 +287,7 @@ h2 {
 
 .nav a {
   text-decoration: none;
-  color:#052f3d;
+  color: #052f3d;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -292,7 +302,7 @@ h2 {
 .social-icons a {
   width: 2em;
   padding: 1em;
-  color:#052f3d;  
+  color: #052f3d;
   transition: color 0.3s;
 }
 
@@ -305,11 +315,11 @@ h2 {
 .clickable-container {
   display: flex;
   justify-content: center;
-  position:sticky;
+  position: sticky;
   margin-top: 3%;
   margin-bottom: 2%;
-  flex-direction: row; 
-  gap: 10em; 
+  flex-direction: row;
+  gap: 10em;
 }
 
 
@@ -325,7 +335,7 @@ h2 {
   position: relative;
   z-index: 3;
   max-height: fit-content;
-  width: 15em;  
+  width: 15em;
   transition: transform 0.3s;
   opacity: 0.8;
 }
@@ -348,14 +358,14 @@ footer {
 
 @media (max-width: 768px) {
   .nav {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 60px;
-      right: 0;
-      background-color: white;
-      width: 100%;
-      padding: 1em;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: white;
+    width: 100%;
+    padding: 1em;
   }
 
   .nav a {
@@ -365,13 +375,13 @@ footer {
 
 
   .burger {
-      display: block;
-      color: #052f3d;
+    display: block;
+    color: #052f3d;
   }
 
   .boxes {
-      flex-direction: column;
-      align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   .intro h1 {
@@ -386,40 +396,43 @@ footer {
     width: 12em;
   }
 
- .clickable-container {
-  flex-direction: column;
+  .clickable-container {
+    flex-direction: column;
     align-items: center;
     width: 20em;
- }
+  }
 
- .profile-pic {
-  max-width: 310px;
-  max-height: 200px;
-  background-image: url('/assets/img/fotoprofilo.jpg'); /* Sostituisci con il percorso della tua immagine */
-  background-size: cover;
-  background-position: center;
-  opacity: 0.95; /* Opacità per effetto traslucido */
-  background-clip: content-box;
-  position: absolute;
-  z-index: -1;
+  .profile-pic {
+    max-width: 310px;
+    max-height: 200px;
+    background-image: url('assets/img/fotoprofilo.jpg');
+    /* Sostituisci con il percorso della tua immagine */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.95;
+    /* Opacità per effetto traslucido */
+    background-clip: content-box;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .custom-font {
+    font-size: smaller;
+  }
+
+  header {
+    padding: 0%;
+  }
 }
 
-.custom-font {
-  font-size:smaller;
+
+.menu-toggle,
+.toggle {
+  display: none;
 }
 
-header{
-padding: 0%;
-}
-}
-
-
-.menu-toggle, .toggle {
-  display: none; 
-}
-
-.menu-toggle:checked + .burger + .nav {
-  display: flex; 
+.menu-toggle:checked+.burger+.nav {
+  display: flex;
   margin-top: 1em;
   border-bottom-left-radius: 15%;
   border-bottom-right-radius: 15%;
@@ -429,70 +442,70 @@ padding: 0%;
 
 /* Stile generico del modulo */
 .contact-form {
-    background-color: #fff;
-    padding: 2em;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    width: 100%;
-    margin: 2em auto;
-    text-align: center;
+  background-color: #fff;
+  padding: 2em;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+  margin: 2em auto;
+  text-align: center;
 }
 
 .contact-form h2 {
-    font-size: 2em;
-    color: #052f3d;
-    margin-bottom: 1em;
+  font-size: 2em;
+  color: #052f3d;
+  margin-bottom: 1em;
 }
 
 .contact-form .form-group {
-    margin-bottom: 1.5em;
-    text-align: left;
+  margin-bottom: 1.5em;
+  text-align: left;
 }
 
 .contact-form label {
-    display: block;
-    font-size: 1em;
-    color: #052f3d;
-    margin-bottom: 0.5em;
+  display: block;
+  font-size: 1em;
+  color: #052f3d;
+  margin-bottom: 0.5em;
 }
 
 .contact-form input,
 .contact-form textarea {
-    width: 100%;
-    padding: 0.8em;
-    margin-top: 0.5em;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-    font-size: 1em;
-    color: #052f3d;
+  width: 100%;
+  padding: 0.8em;
+  margin-top: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  font-size: 1em;
+  color: #052f3d;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-    outline: none;
-    border-color: #052f3d;
-    box-shadow: 0 0 5px rgba(5, 47, 61, 0.3);
+  outline: none;
+  border-color: #052f3d;
+  box-shadow: 0 0 5px rgba(5, 47, 61, 0.3);
 }
 
 .contact-form textarea {
-    resize: vertical;
+  resize: vertical;
 }
 
 .submit-btn {
-    background-color: #052f3d;
-    color: white;
-    padding: 0.8em 2em;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.1em;
-    cursor: pointer;
-    transition: background-color 0.3s;
+  background-color: #052f3d;
+  color: white;
+  padding: 0.8em 2em;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .submit-btn:hover {
-    background-color: #052f3d;
+  background-color: #052f3d;
 }
 
 
@@ -580,17 +593,17 @@ padding: 0%;
 }
 
 /* Mostra il menu a tendina (burger) quando il checkbox è selezionato */
-.menu-toggle:checked + .burger + .nav-mobile {
+.menu-toggle:checked+.burger+.nav-mobile {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: white;
   padding: 1em;
   position: absolute;
-  top: 60px; 
+  top: 60px;
   right: 0;
   width: 100%;
-  z-index: 10;  
+  z-index: 10;
   border-bottom-left-radius: 15%;
   border-bottom-right-radius: 15%;
 }
@@ -610,7 +623,7 @@ padding: 0%;
   color: #e4ba86;
 }
 
- 
+
 .social-icons {
   display: flex;
   justify-content: center;
@@ -636,70 +649,70 @@ padding: 0%;
 /* Responsività per schermi piccoli */
 @media (max-width: 768px) {
   .contact-form {
-      padding: 1.5em;
+    padding: 1.5em;
   }
 
   .contact-form h1 {
-      font-size: 2em;
+    font-size: 2em;
   }
 
   .contact-form .form-group {
-      margin-bottom: 1.2em;
+    margin-bottom: 1.2em;
   }
 
   .submit-btn {
-      padding: 0.7em 1.8em;
-      font-size: 1em;
+    padding: 0.7em 1.8em;
+    font-size: 1em;
   }
 
   header {
     padding: 0.3em 1em;
     justify-content: space-between;
-}
+  }
 
-.logo {
+  .logo {
     width: 10em;
-}
+  }
 
-.burger {
+  .burger {
     display: block;
     font-size: 2em;
     color: #052f3d;
     cursor: pointer;
-}
+  }
 
 
-.menu-toggle:checked + .burger + .nav-mobile {
+  .menu-toggle:checked+.burger+.nav-mobile {
     display: flex;
-    
-}
 
-.social-icons {
+  }
+
+  .social-icons {
     display: none;
-}
+  }
 
-.socialburger {
+  .socialburger {
 
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
 
-.socialburger a {
-padding: 2em;
-}
+  .socialburger a {
+    padding: 2em;
+  }
 
 
-.nav-mobile .nav2 {
+  .nav-mobile .nav2 {
     display: flex;
     flex-direction: column;
     width: 100%;
-}
+  }
 
-.nav-mobile  {
-  display: none;
-}
+  .nav-mobile {
+    display: none;
+  }
 
   .nav {
     display: none;
@@ -716,7 +729,7 @@ padding: 2em;
     color: #052f3d;
   }
 
-  .menu-toggle:checked + .burger + .nav2 {
+  .menu-toggle:checked+.burger+.nav2 {
     display: flex;
     margin-top: 1em;
     border-bottom-left-radius: 15%;
@@ -727,25 +740,29 @@ padding: 2em;
     right: 0;
     background-color: white;
     width: 100%;
-  
+
   }
 
   /* Modifica la disposizione dei box (da 3 a 2 per i dispositivi mobili) */
   .box {
-    width: calc(100% - 10px); /* Due box per riga su schermi piccoli */
+    width: calc(100% - 10px);
+    /* Due box per riga su schermi piccoli */
     padding: 1.5em;
 
   }
 
   /* Adatta la disposizione delle immagini nei box */
   .projects {
-    grid-template-columns: repeat(1, 1fr); /* Una sola colonna per le immagini */
+    grid-template-columns: repeat(1, 1fr);
+    /* Una sola colonna per le immagini */
   }
 
   /* Adatta la foto del profilo */
   .profile-pic {
-    width: 40em; /* La larghezza occupa tutto lo spazio disponibile */
-    height: 30em; /* Impostato a una altezza ragionevole */
+    width: 40em;
+    /* La larghezza occupa tutto lo spazio disponibile */
+    height: 30em;
+    /* Impostato a una altezza ragionevole */
     background-size: cover;
     background-position: center;
     opacity: 0.95;
@@ -776,12 +793,13 @@ padding: 2em;
     margin-bottom: 1em;
   }
 
-  .intro  h1{
+  .intro h1 {
     width: auto;
   }
 
   .text-content {
-    max-width: 90%; /* Testo più largo sui dispositivi mobili */
+    max-width: 90%;
+    /* Testo più largo sui dispositivi mobili */
     text-align: center;
   }
 
@@ -794,13 +812,15 @@ padding: 2em;
 
   .clickable-section1 {
     max-width: 100%;
-    width: 100%; /* I box sono ora più larghi */
+    width: 100%;
+    /* I box sono ora più larghi */
     padding: 10% 3%;
   }
 
   /* Adatta le immagini della galleria dei progetti */
   .project img {
-    width: 100%; /* Le immagini riempiono il contenitore */
+    width: 100%;
+    /* Le immagini riempiono il contenitore */
     height: auto;
     border-radius: 8px;
   }
@@ -834,7 +854,8 @@ padding: 2em;
     margin-bottom: 1em;
   }
 
-  .contact-form input, .contact-form textarea {
+  .contact-form input,
+  .contact-form textarea {
     width: 100%;
     padding: 0.8em;
     margin-top: 0.5em;
@@ -850,51 +871,70 @@ padding: 2em;
 /*cv*/
 
 .container {
-  display:flex ;
+  display: flex;
   flex-direction: column;
-  max-width: 120em; /* Imposta una larghezza massima per il contenuto */
-  margin: 3em 3EM; /* Centra il contenuto orizzontalmente */
-  padding: 2em 3em; /* Padding per dare spazio interno */
-  background-color: #063f5271; /* Colore di sfondo coerente con lo stile del sito */
-  border-radius: 10px; /* Aggiunge angoli arrotondati */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Aggiunge ombra leggera */
+  max-width: 120em;
+  /* Imposta una larghezza massima per il contenuto */
+  margin: 3em 3EM;
+  /* Centra il contenuto orizzontalmente */
+  padding: 2em 3em;
+  /* Padding per dare spazio interno */
+  background-color: #063f5271;
+  /* Colore di sfondo coerente con lo stile del sito */
+  border-radius: 10px;
+  /* Aggiunge angoli arrotondati */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Aggiunge ombra leggera */
 }
 
-.container h1, .container h2 {
-  color:#ffffff; /* Colore del testo in linea con il tema del sito */
+.container h1,
+.container h2 {
+  color: #ffffff;
+  /* Colore del testo in linea con il tema del sito */
   border-radius: 30px;
   text-align: center;
 }
 
 .container h6 {
-  color:#ffffff99; /* Colore del testo in linea con il tema del sito */
+  color: #ffffff99;
+  /* Colore del testo in linea con il tema del sito */
 }
 
 .container .col-md-8 p {
-  color:#ffffffcc; /* Colore del testo per i paragrafi */
+  color: #ffffffcc;
+  /* Colore del testo per i paragrafi */
   max-width: 20em;
   margin: 0 auto 1em auto;
 }
 
 .container ul {
-  list-style: none; /* Rimuove i pallini dalle liste */
-  padding-left: 0; /* Rimuove il padding a sinistra */
+  list-style: none;
+  /* Rimuove i pallini dalle liste */
+  padding-left: 0;
+  /* Rimuove il padding a sinistra */
 }
 
 .container ul li {
-  margin-bottom: 1em; /* Distanza tra gli elementi della lista */
-  font-size: 1.1em; /* Font leggermente più grande per la leggibilità */
-  color: #f9f9f9; /* Colore del testo delle voci */
+  margin-bottom: 1em;
+  /* Distanza tra gli elementi della lista */
+  font-size: 1.1em;
+  /* Font leggermente più grande per la leggibilità */
+  color: #f9f9f9;
+  /* Colore del testo delle voci */
 }
 
 .container a {
-  color: #e4ba86; /* Colore del link */
-  text-decoration: none; /* Rimuove la sottolineatura */
+  color: #e4ba86;
+  /* Colore del link */
+  text-decoration: none;
+  /* Rimuove la sottolineatura */
 }
 
 .container a:hover {
-  color:#ccc; /* Colore del link al passaggio del mouse */
-  text-decoration: underline; /* Aggiunge sottolineatura al passaggio del mouse */
+  color: #ccc;
+  /* Colore del link al passaggio del mouse */
+  text-decoration: underline;
+  /* Aggiunge sottolineatura al passaggio del mouse */
 }
 
 .container .row {
@@ -915,32 +955,43 @@ padding: 2em;
 }
 
 .progress-container {
-  width: 100%; /* La larghezza della barra di progressione */
-  height: 10px; /* Altezza della barra */
-  background-color: #e0e0e0; /* Colore di sfondo della barra */
-  border-radius: 15px; /* Angoli arrotondati */
-  overflow: hidden; /* Evita che il contenuto esca dai bordi */
+  width: 100%;
+  /* La larghezza della barra di progressione */
+  height: 10px;
+  /* Altezza della barra */
+  background-color: #e0e0e0;
+  /* Colore di sfondo della barra */
+  border-radius: 15px;
+  /* Angoli arrotondati */
+  overflow: hidden;
+  /* Evita che il contenuto esca dai bordi */
 }
 
 .progress-bar {
-  height: 100%; /* La barra di progresso avrà sempre l'altezza della container */
-  background-color: #ce944e; /* Colore della barra, verde in questo caso */
-  transition: width 0.3s ease; /* Aggiunge una transizione per un riempimento più fluido */
+  height: 100%;
+  /* La barra di progresso avrà sempre l'altezza della container */
+  background-color: #ce944e;
+  /* Colore della barra, verde in questo caso */
+  transition: width 0.3s ease;
+  /* Aggiunge una transizione per un riempimento più fluido */
 }
 
 
 .container .col-md-4,
 .container .col-md-8 {
   flex: 1;
-  min-width: 280px; /* Impedisce che le colonne si restringano troppo su schermi piccoli */
+  min-width: 280px;
+  /* Impedisce che le colonne si restringano troppo su schermi piccoli */
   margin-top: 2em;
 }
 
 .container .col-md-4 {
-  background-color: #063f5271; /* Fondo leggero per la colonna laterale */
+  background-color: #063f5271;
+  /* Fondo leggero per la colonna laterale */
   padding: 2em;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombra leggera */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Ombra leggera */
 }
 
 .container .col-md-8 {
@@ -948,13 +999,13 @@ padding: 2em;
 }
 
 .container .col-md-8 h2 {
-  background-color:#ccccccd3;
+  background-color: #ccccccd3;
   margin-bottom: 1.5em;
   color: #052f3d;
 }
 
 .container .col-md-4 h2 {
-  background-color:#ccccccd3;
+  background-color: #ccccccd3;
   margin-bottom: 1.5em;
   color: #052f3d;
 }
@@ -962,7 +1013,7 @@ padding: 2em;
 .container .col-md-8 .mb-4 {
   margin-bottom: 1em;
   padding-bottom: 1em;
-  border-bottom: 0.05em solid #cccccc70; 
+  border-bottom: 0.05em solid #cccccc70;
 }
 
 .container .col-md-8 .mb-4 h6 {
@@ -971,16 +1022,18 @@ padding: 2em;
 
 .container .mb-4 h5 {
   margin-bottom: 3.5em;
-  color:#ce944ebe;
+  color: #ce944ebe;
 }
 
 @media (max-width: 768px) {
   .container {
-    padding: 1.5em; /* Riduce il padding per schermi più piccoli */
+    padding: 1.5em;
+    /* Riduce il padding per schermi più piccoli */
   }
 
   .container .row {
-    flex-direction: column; /* Allinea le colonne in verticale su schermi piccoli */
+    flex-direction: column;
+    /* Allinea le colonne in verticale su schermi piccoli */
   }
 
   .container .col-md-4,
@@ -992,13 +1045,14 @@ padding: 2em;
 }
 
 
- .container .profile-pic2 {
-  width:auto;
+.container .profile-pic2 {
+  width: auto;
   height: 10em;
-  background-image: url('/assets/img/fotoprofilo.jpg'); 
+  background-image: url('assets/img/fotoprofilo.jpg');
   background-size: cover;
   background-position: center;
-  opacity: 0.85; /* Opacità per effetto traslucido */
+  opacity: 0.85;
+  /* Opacità per effetto traslucido */
   background-clip: padding-box;
   position: relative;
   display: flex;
