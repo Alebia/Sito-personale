@@ -89,33 +89,35 @@
 
 
     <footer>
-        <div class="footer-logo">Logo</div>
-        <div class="social-icons">
-            <a href="https://www.instagram.com/alebia23/?hl=it" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/in/alessiabianchi1994/" target="_blank"><i
-                    class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/Alebia" target="_blank"><i class="fab fa-github"></i></a>
-        </div>
-    </footer>
 
-    <!-- Includi il JS di EmailJS -->
+        <div class="social-icons">
+          <a href="https://www.instagram.com/alebia23/?hl=it" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/alessiabianchi1994/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/Alebia" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+    
+        <div class="social-iconsfooter">
+          <a href="https://www.instagram.com/alebia23/?hl=it" target="_blank" class="text-dark me-2"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/alessiabianchi1994/" target="_blank" class="text-dark me-2"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/Alebia" target="_blank" class="text-dark me-2"><i class="fab fa-github"></i></a>
+        </div>
+      </footer>
+
+   
     <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
-    <!-- Inizializza EmailJS -->
     <script type="text/javascript">
         (function () {
-            emailjs.init("GAlvOuUBfuRbzPQug");  // Sostituisci con il tuo user_id
+            emailjs.init("GAlvOuUBfuRbzPQug");  
         })();
     </script>
 
-    <!-- Invia il modulo a EmailJS -->
     <script type="text/javascript">
         document.getElementById('contact-form').addEventListener('submit', function (event) {
-            event.preventDefault(); // Prevenire il comportamento predefinito di invio del form
+            event.preventDefault(); 
 
             var form = event.target;
 
-            // Usa emailjs.sendForm per inviare il form
             emailjs.sendForm('service_8tpfx5j', 'template_57zwhcs', form)
                 .then(function (response) {
                     console.log('Successo:', response);
