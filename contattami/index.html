@@ -7,13 +7,13 @@
     <link rel="stylesheet" href="../assets/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="assets/img/Alessia Bianchi2.png" />
+    <link rel="icon" type="image/png" href="../assets/img/AlessiaBianchi2.png" />
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
     <title>Portfolio di Alessia</title>
 </head>
 
 <body>
-
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
     <header>
 
@@ -37,11 +37,11 @@
                 <a href="index.html" class="nav-link text-dark">Contattami</a>
 
                 <div class="socialburger">
-                    <a href="https://www.instagram.com/alebia23/?hl=it" target="_blank" class="text-dark me-2"><i
+                    <a href="https://www.instagram.com/alebia23/?hl=it" rel="noopener" target="_blank" class="text-dark me-2"><i
                             class="fab fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/in/alessiabianchi1994/" target="_blank" class="text-dark me-2"><i
+                    <a href="https://www.linkedin.com/in/alessiabianchi1994/" rel="noopener" target="_blank" class="text-dark me-2"><i
                             class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/Alebia" target="_blank" class="text-dark me-2"><i
+                    <a href="https://github.com/Alebia" rel="noopener" target="_blank" class="text-dark me-2"><i
                             class="fab fa-github"></i></a>
                 </div>
             </nav>
@@ -49,10 +49,10 @@
 
 
         <div class="social-icons">
-            <a href="https://www.instagram.com/alebia23/?hl=it" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/in/alessiabianchi1994/" target="_blank"><i
+            <a href="https://www.instagram.com/alebia23/?hl=it" rel="noopener" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/alessiabianchi1994/" rel="noopener" target="_blank"><i
                     class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/Alebia" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://github.com/Alebia" rel="noopener" target="_blank"><i class="fab fa-github"></i></a>
         </div>
 
 
@@ -92,47 +92,22 @@
     <footer>
 
         <div class="social-icons">
-            <a href="https://www.instagram.com/alebia23/?hl=it" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/in/alessiabianchi1994/" target="_blank"><i
+            <a href="https://www.instagram.com/alebia23/?hl=it" rel="noopener" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/alessiabianchi1994/" rel="noopener" target="_blank"><i
                     class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/Alebia" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://github.com/Alebia" rel="noopener" target="_blank"><i class="fab fa-github"></i></a>
         </div>
 
         <div class="social-iconsfooter">
-            <a href="https://www.instagram.com/alebia23/?hl=it" target="_blank" class="text-dark me-2"><i
+            <a href="https://www.instagram.com/alebia23/?hl=it" rel="noopener" target="_blank" class="text-dark me-2"><i
                     class="fab fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/in/alessiabianchi1994/" target="_blank" class="text-dark me-2"><i
+            <a href="https://www.linkedin.com/in/alessiabianchi1994/" rel="noopener" target="_blank" class="text-dark me-2"><i
                     class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/Alebia" target="_blank" class="text-dark me-2"><i class="fab fa-github"></i></a>
+            <a href="https://github.com/Alebia" rel="noopener" target="_blank" class="text-dark me-2"><i class="fab fa-github"></i></a>
         </div>
     </footer>
 
-
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-
-    <script type="text/javascript">
-        (function () {
-            emailjs.init("GAlvOuUBfuRbzPQug");
-        })();
-    </script>
-
-    <script type="text/javascript">
-        document.getElementById('contact-form').addEventListener('submit', function (event) {
-            event.preventDefault();
-
-            var form = event.target;
-
-            emailjs.sendForm('service_8tpfx5j', 'template_57zwhcs', form)
-                .then(function (response) {
-                    console.log('Successo:', response);
-                    alert("Il tuo messaggio è stato inviato con successo!");
-                }, function (error) {
-                    console.error('Errore:', error);
-                    alert("C'è stato un errore nell'invio del messaggio. Riprova.");
-                });
-        });
-    </script>
-
+    <script src="../assets/email-sender.js"></script>
 
 </body>
 

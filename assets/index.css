@@ -893,7 +893,7 @@ footer {
 .container .profile-pic2 {
   width: auto;
   height: 10em;
-  background-image: url('img/fotoprofilo.jpg');
+  background-image: url('../img/fotoprofilo.jpg');
   background-size: cover;
   background-position: center;
   opacity: 0.85;
