@@ -237,7 +237,7 @@ h2 {
 .profile-pic {
   width: 50em;
   height: 35em;
-  background-image: linear-gradient(to right, #052f3d 0%, rgba(255, 255, 255, 0) 100%), url('assets/img/fotoprofilo.jpg');
+  background-image: linear-gradient(to right, #052f3d 0%, rgba(255, 255, 255, 0) 100%), url('img/fotoprofilo.jpg');
   background-size: cover;
   background-position: center;
   opacity: 0.95;
@@ -893,7 +893,7 @@ footer {
 .container .profile-pic2 {
   width: auto;
   height: 10em;
-  background-image: url('assets/img/fotoprofilo.jpg');
+  background-image: url('img/fotoprofilo.jpg');
   background-size: cover;
   background-position: center;
   opacity: 0.85;
