@@ -713,6 +713,49 @@ footer {
 .progress-bar {
   height: 100%;
   background-color: #ce944e;
+  width: 80%;
+  transition: width 0.3s ease;
+}
+
+.progress-bar1 {
+  height: 100%;
+  background-color: #ce944e;
+  width: 70%;
+  transition: width 0.3s ease;
+}
+
+.progress-bar2 {
+  height: 100%;
+  background-color: #ce944e;
+  width: 85%;
+  transition: width 0.3s ease;
+}
+
+.progress-bar3 {
+  height: 100%;
+  background-color: #ce944e;
+  width: 60%;
+  transition: width 0.3s ease;
+}
+
+.progress-bar4 {
+  height: 100%;
+  background-color: #ce944e;
+  width: 60%;
+  transition: width 0.3s ease;
+}
+
+.progress-bar5 {
+  height: 100%;
+  background-color: #ce944e;
+  width: 40%;
+  transition: width 0.3s ease;
+}
+
+.progress-bar6 {
+  height: 100%;
+  background-color: #ce944e;
+  width: 70%;
   transition: width 0.3s ease;
 }
 
