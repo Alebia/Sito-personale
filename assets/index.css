@@ -710,10 +710,17 @@ footer {
   overflow: hidden;
 }
 
-.progress-bar {
+.progress-bar0 {
   height: 100%;
   background-color: #ce944e;
   width: 80%;
+  transition: width 0.3s ease;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #ce944e;
+  width: 75%;
   transition: width 0.3s ease;
 }
 
